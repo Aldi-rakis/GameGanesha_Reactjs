@@ -1,0 +1,134 @@
+.App {
+ 
+  margin: 0px;
+  padding: 0px;
+
+  
+}
+
+/* src/App.css */
+.background {
+
+  background-image: url('./assets/Bg.png');
+  background-size: cover; /* Menyesuaikan ukuran gambar sesuai elemen */
+  background-position: center; /* Menempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+
+  height: 98vh; /* Mengatur tinggi elemen sama dengan tinggi layar */
+  z-index: -1;
+}
+
+
+/* src/components/Buttons.css */
+.buttons-container {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  
+}
+
+button {
+  margin: 12px;
+ font-size: larger;
+  height: 60px;
+  width: 200px;
+  border-radius: 10px;
+  border-color: white;
+  background-color: #856D2E;
+  color: white;
+}
+
+button:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+
+/* src/components/Buttons.css */
+.menu{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+}
+
+.menu img{
+  width: 100%;
+}
+
+#musik {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  font-size: 18px;
+  width: 100px;
+}
+
+#musik:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+
+#home-button{
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  font-size: 18px;
+  width: 100px;
+}
+#home-button:hover{
+  transition-duration: 0.5s;
+transform: scale(1.2);
+}
+
+#prev-btn{
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  font-size: 18px;
+  width: 100px;
+}
+
+#prev-btn:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+
+
+#title-game {
+  position: absolute;
+  top: 0%;
+  left: 35%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  width: 600px;
+
+}
+
+.list-game {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  
+}
+
+.list-game img {
+  width: 200px;
+  margin: 50px;
+}
+
+.list-game img:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
