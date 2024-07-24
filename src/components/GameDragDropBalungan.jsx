@@ -5,10 +5,10 @@ import benar from "../assets/benar.png"
 import salah from "../assets/salah.png"
 import home from "../assets/home.png"
 const images = [
-    { id: 1, src: "/gendang.png", name: "Gendang" },
-    { id: 2, src: "/gong.png", name: "Gong" },
-    { id: 3, src: "/saron.png", name: "Saron" },
-    { id: 4, src: "/siter.png", name: "Siter" },
+    { id: 1, src: "/demung.png", name: "Demung" },
+    { id: 2, src: "/saron.png", name: "Saron" },
+    { id: 3, src: "/peking.png", name: "Peking" },
+    { id: 4, src: "/slenthem.png", name: "Slenthem" },
 ];
 
 const shuffleArray = (array) => {

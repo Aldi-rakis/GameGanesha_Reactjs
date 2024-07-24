@@ -23,6 +23,12 @@ function RoutesIndex() {
                  {/* route home */}
             <Route path="/game/balungan" element={
                 <Balungan />
+              } /> 
+
+              
+                 {/* route home */}
+            <Route path="/game/blimbingan" element={
+                <Blimingan />
               } />
 
                 {/* route home */}
