@@ -5,10 +5,10 @@ import benar from "../assets/benar.png"
 import salah from "../assets/salah.png"
 import home from "../assets/home.png"
 const images = [
-    { id: 1, src: "/gendang.png", name: "Gendang" },
-    { id: 2, src: "/gong.png", name: "Gong" },
-    { id: 3, src: "/saron.png", name: "Saron" },
-    { id: 4, src: "/siter.png", name: "Siter" },
+    { id: 1, src: "/rebab.png", name: "Rebab" },
+    { id: 2, src: "/gembang.png", name: "Gembang" },
+    { id: 3, src: "/gender.png", name: "Gender" },
+    { id: 4, src: "/slenthem.png", name: "Slenthem" },
 ];
 
 const shuffleArray = (array) => {
@@ -102,8 +102,8 @@ const GameDragDropBlimbingan = () => {
                <img id="title-game2" src="/titlegame2.png" alt="" />
                 
                 <div className="score-nyawa">
-                    <h3>Score: {score}</h3>
-                    <h4>Nyawa: {nyawa}</h4>
+                    <p>Score: {score}</p>
+                    <p>Nyawa: {nyawa}</p>
                 </div>
                 
                 <div className="images">

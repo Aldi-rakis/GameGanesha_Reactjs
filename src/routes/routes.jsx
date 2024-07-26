@@ -5,6 +5,7 @@ import Game from "../page/Game/Index.jsx";
 import Balungan from "../page/Game/balungan.jsx";
 import Blimingan from "../page/Game/blimbingan.jsx";
 import Pencon from "../page/Game/pencon.jsx"
+import Help from "../page/Help/Index.jsx";
 
 function RoutesIndex() {
     return (
@@ -20,6 +21,9 @@ function RoutesIndex() {
                 <Game />
               } />
 
+
+
+
                  {/* route home */}
             <Route path="/game/balungan" element={
                 <Balungan />
@@ -34,6 +38,11 @@ function RoutesIndex() {
                 {/* route home */}
             <Route path="/game/pencon" element={
                 <Pencon />
+              } />
+
+                {/* route home */}
+            <Route path="/help" element={
+                <Help />
               } />
 
 

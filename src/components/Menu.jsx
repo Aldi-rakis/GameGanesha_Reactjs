@@ -20,9 +20,13 @@ const HandleToGame = () => {
 
             <div className="buttons-container">
 
-                <button onClick={HandleToGame}>Start Game</button>
+                <img onClick={HandleToGame} src="/btn_startGame.png" alt="" />
+                <img src="/btn_Setting.png" alt="" />
+                <img src="/btn_Help.png" alt="" />
+
+                {/* <button onClick={HandleToGame}>Start Game</button>
                 <button>Setting</button>
-                <button>Help</button>
+                <button>Help</button> */}
             </div>
             <div className="menu">
                 <img src={papmenu} alt="" />

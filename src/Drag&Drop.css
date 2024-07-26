@@ -45,7 +45,23 @@
     top: 8px;
     right: 16px;
     font-size: 18px;
+    padding: 5px;
+   
+    margin: 2px;
+    grid-column: 10px;
   }
+
+  .score-nyawa p {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    background-color: rgb(149, 89, 10);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+
 
   
   

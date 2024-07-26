@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../Drag&Drop.css";
 import { useNavigate } from "react-router-dom";
-import benar from "../assets/benar.png"
-import salah from "../assets/salah.png"
-import home from "../assets/home.png"
+import benar from "../assets/benar.png";
+import salah from "../assets/salah.png";
+import home from "../assets/home.png";
+import ScoreStorage from './ScoreStorage'; // Ditambahkan: Import komponen ScoreStorage
+
 const images = [
     { id: 1, src: "/demung.png", name: "Demung" },
     { id: 2, src: "/saron.png", name: "Saron" },
@@ -19,6 +21,7 @@ const shuffleArray = (array) => {
     return array;
 };
 
+
 const GameDragDropBalungan = () => {
     const [droppedItems, setDroppedItems] = useState([]);
     const [score, setScore] = useState(0);
@@ -30,7 +33,15 @@ const GameDragDropBalungan = () => {
 
     useEffect(() => {
         setShuffledBoxes(shuffleArray([...images]));
+        const savedScore = localStorage.getItem("score");
+        if (savedScore) {
+            setScore(parseInt(savedScore, 10));
+        }
     }, []);
+
+    useEffect(() => {
+        localStorage.setItem("score", score);
+    }, [score]);
 
     const handleDragStart = (e, id) => {
         if (droppedItems.some((item) => item.imageId === id)) {
@@ -59,7 +70,6 @@ const GameDragDropBalungan = () => {
                 if (newNyawa <= 0) {
                     setGameOver(true);
                 }
-               
                 return newNyawa;
             });
         }
@@ -74,38 +84,37 @@ const GameDragDropBalungan = () => {
     const remainingImages = images.filter(
         (image) => !droppedItems.some((item) => item.imageId === image.id)
     );
-    
-    //navigate
+
     const navigate = useNavigate();
 
     const HandleToMenu = () => {
         navigate('/game'); // navigate to home
     };
-    
 
     return (
         <div className="background">
-            <img onClick={HandleToMenu} id="home-button" src={home} alt="" />
+            <img onClick={HandleToMenu} id="home-button" src={home} alt="home" />
             {showPopup && <div className="popup">
-                <img src={popupMessage} alt="" />
-                </div>}
-            {gameOver && <div class="popup-wrap">
-                <div class="popup-box">
+                <img src={popupMessage} alt="popup message" />
+            </div>}
+            {gameOver && <div className="popup-wrap">
+                <div className="popup-box">
                     <h2>Game Over</h2>
-                    <h3>Skor anda saat ini: {score} </h3>
-                    <button onClick={HandleToMenu}>home</button>
-                    <a class="close-btn popup-close" href="/">X</a>
+                    <h3>Skor anda saat ini: {score}</h3>
+                    <button onClick={HandleToMenu}>Home</button>
+                    <a className="close-btn popup-close" href="/">X</a>
                 </div>
             </div>}
-            
+
             <div className="container">
-               <img id="title-game2" src="/titlegame2.png" alt="" />
-                
+                <img id="title-game2" src="/titlegame2.png" alt="title game" />
+
                 <div className="score-nyawa">
-                    <h3>Score: {score}</h3>
-                    <h4>Nyawa: {nyawa}</h4>
+                    <p>Score: {score}</p>
+                    <p>Nyawa: {nyawa}</p>
+                  
                 </div>
-                
+
                 <div className="images">
                     {remainingImages.map((image) => (
                         <img
@@ -141,6 +150,7 @@ const GameDragDropBalungan = () => {
                     ))}
                 </div>
             </div>
+           
         </div>
     );
 };

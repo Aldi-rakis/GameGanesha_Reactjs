@@ -32,16 +32,17 @@
   
 }
 
-button {
-  margin: 12px;
- font-size: larger;
-  height: 60px;
-  width: 200px;
-  border-radius: 10px;
-  border-color: white;
-  background-color: #856D2E;
-  color: white;
+.buttons-container img{
+ width: 200px;
+  
 }
+
+.buttons-container img:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+   
+ }
+
 
 button:hover{
   transition-duration: 0.5s;
@@ -130,5 +131,46 @@ transform: scale(1.2);
 
 .list-game img:hover{
   transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+
+
+.slide-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+}
+
+
+.slide-container img{
+max-width: 1080px;
+}
+
+.buttonSlide-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+
+  align-items: center;
+  z-index: 1;
+ 
+}
+
+.buttonSlide-container img{
+  margin-inline: 450px;
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 100px;
+}
+
+.buttonSlide-container img:hover{
+  transition-duration: 0.3s;
   transform: scale(1.2);
 }
