@@ -14,6 +14,10 @@ const HandleToGame = () => {
     navigate('/game'); // navigate to /admin/login
 };
 
+const HandleToHelp= () => {
+    navigate('/help'); // navigate to /admin/login
+};
+
 
     return (
         <div>
@@ -22,7 +26,7 @@ const HandleToGame = () => {
 
                 <img onClick={HandleToGame} src="/btn_startGame.png" alt="" />
                 <img src="/btn_Setting.png" alt="" />
-                <img src="/btn_Help.png" alt="" />
+                <img onClick={HandleToHelp} src="/btn_Help.png" alt="" />
 
                 {/* <button onClick={HandleToGame}>Start Game</button>
                 <button>Setting</button>
