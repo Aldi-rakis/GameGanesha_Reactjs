@@ -1,7 +1,7 @@
 import papmenu from "../assets/Menuboard.png"
 //import react router dom
 import { useNavigate } from "react-router-dom";
-
+import SoundEffect from "../utils/Soundeffect";
 
 function Menu() {
 
@@ -18,13 +18,16 @@ const HandleToHelp= () => {
     navigate('/help'); // navigate to /admin/login
 };
 
+const Effecbutton = () => {
+    SoundEffect();
+  };
 
     return (
         <div>
 
             <div className="buttons-container">
 
-                <img onClick={HandleToGame} src="/btn_startGame.png" alt="" />
+                <img onClick={() => { HandleToGame(); Effecbutton(); }}src="/btn_startGame.png" alt="" />
                 <img src="/btn_Setting.png" alt="" />
                 <img onClick={HandleToHelp} src="/btn_Help.png" alt="" />
 

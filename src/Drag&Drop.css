@@ -171,7 +171,16 @@
   }
 
   button {
-    background-color: #888;
+  
+      margin: 12px;
+     font-size: larger;
+      height: 60px;
+      width: 200px;
+      border-radius: 10px;
+      border-color: white;
+      background-color: #856D2E;
+      color: white;
+    
   }
   
   .close-btn {
